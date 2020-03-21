@@ -1,0 +1,84 @@
+$purblish: #1d1d2d;
+$card_color: #26283d;
+
+li.list-group-item{
+    background-color: $card_color;
+}
+
+div.card{
+    padding: 0.5rem;
+}
+
+.card .card-body .card-title{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.list-group-item{
+    border: 0;
+}
+
+.card .card-body{
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+#instructor{
+    font-size: 0.7rem;
+}
+
+.card-text:last-child{
+    margin-bottom: 7px;
+}
+
+#hor_line{
+    border-top: 0.0625rem solid #e9ecef;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    opacity: 0.3;
+}
+
+#ver_line{
+    border-right: 0.0625rem solid #e9ecef;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5rem;
+    opacity: 0.3;
+}
+
+
+.draft_status{
+    margin-left: 2rem;
+    background-color: #BDC6C6;
+    padding: 3px;
+    border: 1px solid #BDC6C6;
+    border-radius: 3px;
+}
+
+.published_status{
+    margin-left: 2rem;
+    background-color: #00D4A7;
+    padding: 3px;
+    border: 1px solid #00D4A7;
+    border-radius: 3px;
+}
+
+.deleted_status{
+    margin-left: 2rem;
+    background-color: red;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+#course_link{
+    color: inherit;
+}
+
+.card{
+    margin-bottom: 1rem;
+}
+

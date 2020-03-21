@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="card-deck">
+    <div *ngFor="let course of courses">
+      <div class="card" style="width: 18rem;">
+        <img src="{{course.image}}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"> <a href="/course/{{course.id}}" id="course_link">{{course.title}}</a></h5>
+          <p id="instructor"> by <a href="#">{{course.instructor}}</a></p>
+          <p class="card-text">{{course.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <span id="hor_line"></span>
+          <li class="list-group-item">
+            <span id="left_bottom_card">{{course.cost}}$</span>
+            <span id="ver_line"></span>
+            <span id="right_bottom_card" class="published_status"
+              *ngIf="course.status == 'Published'">{{course.status}}</span>
+            <span id="right_bottom_card" class="draft_status" *ngIf="course.status == 'Draft'">{{course.status}}</span>
+            <span id="right_bottom_card" class="deleted_status" *ngIf="course.status == 'Deleted'">{{course.status}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
