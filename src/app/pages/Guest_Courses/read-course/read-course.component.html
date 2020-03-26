@@ -1,3 +1,64 @@
-<p>
-  read-course works!
-</p>
+<div class="content">
+  <h1>{{course.title}}</h1>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 col-md-12">
+      <img src="https://www.teacheracademy.eu/wp-content/uploads/2019/02/CLA.1.DIV_-1216x757.jpg" alt="">
+    </div>
+    <div class="col-lg-6 col-sm-12 col-md-12">
+      <h3 id="course_title">{{course.title}}</h3>
+      <div>
+        <ngb-rating [(rate)]="course.rating" [max]="5" class="star" [readonly]="true">
+          <ng-template let-fill="fill" let-index="index">
+            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+          </ng-template>
+        </ngb-rating>
+      </div>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="col-lg-3">
+          <h5>Cost: {{course.cost}}$</h5>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="row">
+            <div class="col-md-1">
+              <h5>Status:</h5>
+            </div>
+            <div class="col-md-2">
+              <span id="right_bottom_card" class="published_status"
+                *ngIf="course.status == 'Published'">{{course.status}}</span>
+              <span id="right_bottom_card" class="draft_status"
+                *ngIf="course.status == 'Draft'">{{course.status}}</span>
+              <span id="right_bottom_card" class="deleted_status"
+                *ngIf="course.status == 'Deleted'">{{course.status}}</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 col-md-12">
+      <h4>Description</h4>
+      <p>
+        {{course.description}}
+      </p>
+    </div>
+
+    <div class="col-lg-6 col-sm-12 col-md-12">
+      <h4>Reviews</h4>
+      <ul class="list-group" id="review_list" *ngFor="let review of course.reviews">
+        <li class="list-group-item">
+          <p>{{review.student.name}}</p>
+          <p>{{review.content}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

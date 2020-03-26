@@ -4,8 +4,15 @@
       <div class="card" style="width: 18rem;">
         <img src="{{course.image}}" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title"> <a href="/course/{{course.id}}" id="course_link">{{course.title}}</a></h5>
+          <h5 class="card-title"> <a href="#/course/{{course.id}}" id="course_link">{{course.title}}</a></h5>
           <p id="instructor"> by <a href="#">{{course.instructor}}</a></p>
+          <!--  RATING -->
+          <ngb-rating [(rate)]="course.rating" [max]="5" class="star" [readonly]="true">
+            <ng-template let-fill="fill" let-index="index">
+              <span class="star" [class.filled]="fill === 100">&#9733;</span>
+            </ng-template>
+          </ngb-rating>
+          <!--  -->
           <p class="card-text">{{course.description}}</p>
         </div>
         <ul class="list-group list-group-flush">
@@ -16,7 +23,8 @@
             <span id="right_bottom_card" class="published_status"
               *ngIf="course.status == 'Published'">{{course.status}}</span>
             <span id="right_bottom_card" class="draft_status" *ngIf="course.status == 'Draft'">{{course.status}}</span>
-            <span id="right_bottom_card" class="deleted_status" *ngIf="course.status == 'Deleted'">{{course.status}}</span>
+            <span id="right_bottom_card" class="deleted_status"
+              *ngIf="course.status == 'Deleted'">{{course.status}}</span>
           </li>
         </ul>
       </div>

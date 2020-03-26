@@ -1,0 +1,45 @@
+$purblish: #1d1d2d;
+// RATING CSS
+.star {
+  font-size: 1rem;
+  color: #b0c4de;
+  outline: none !important;
+}
+
+.filled {
+  color: yellow;
+}
+
+#course_title {
+  margin-bottom: 0;
+}
+
+
+
+.draft_status {
+    margin-left: 2rem;
+    background-color: #BDC6C6;
+    padding: 3px;
+    border: 1px solid #BDC6C6;
+    border-radius: 3px;
+  }
+  
+  .published_status {
+    margin-left: 2rem;
+    background-color: #00D4A7;
+    padding: 3px;
+    border: 1px solid #00D4A7;
+    border-radius: 3px;
+  }
+  
+  .deleted_status {
+    margin-left: 2rem;
+    background-color: red;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 3px;
+  }
+
+  #review_list li{
+      background-color: $purblish;
+  }

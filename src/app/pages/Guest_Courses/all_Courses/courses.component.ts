@@ -10,6 +10,7 @@ export class CoursesComponent implements OnInit {
   constructor() { }
 
   private courses = [];
+  private currentRate = 6;
 
   ngOnInit() {
     this.courses = [
@@ -21,7 +22,9 @@ export class CoursesComponent implements OnInit {
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         rating: 3,
         cost: 50,
-        status: "Published"
+        status: "Published",
+        students:[],
+        reviews:[]
       },
       {
         id:2,
@@ -31,7 +34,9 @@ export class CoursesComponent implements OnInit {
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         rating: 2,
         cost: 20,
-        status: "Published"
+        status: "Published",
+        students:[],
+        reviews:[]
       },
       {
         id:3,
@@ -41,7 +46,9 @@ export class CoursesComponent implements OnInit {
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         rating: 4,
         cost: 100,
-        status: "Draft"
+        status: "Draft",
+        students:[],
+        reviews:[]
       },
       {
         id:4,
@@ -51,7 +58,9 @@ export class CoursesComponent implements OnInit {
         description:"Some quick example text to build on the card title and make up the bulk of the card's content.",
         rating: 4,
         cost: 100,
-        status: "Deleted"
+        status: "Deleted",
+        students:[],
+        reviews:[]
       },
     ]
   }

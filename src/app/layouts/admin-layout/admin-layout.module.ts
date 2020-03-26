@@ -15,6 +15,7 @@ import { TypographyComponent } from "../../pages/typography/typography.component
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 import { CoursesComponent } from 'src/app/pages/Guest_Courses/all_Courses/courses.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ReadCourseComponent } from 'src/app/pages/Guest_Courses/read-course/read-course.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     TypographyComponent,
     NotificationsComponent,
     MapComponent,
-    CoursesComponent
+    CoursesComponent,
+    ReadCourseComponent
     // RtlComponent
   ]
 })
